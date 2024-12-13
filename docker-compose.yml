@@ -1,0 +1,17 @@
+services:
+
+  mysql-db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: p@ssword
+      LOWER_CASE_TABLE_NAMES: 1
+    ports:
+      - '3306:3306'
+    volumes:
+      - db:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./db/my.cnf:/etc/mysql/my.cnf
+volumes:
+  db:
+    driver: local

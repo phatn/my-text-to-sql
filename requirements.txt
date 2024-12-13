@@ -1,0 +1,9 @@
+transformers~=4.46.3
+sentencepiece
+torch~=2.2.2
+fastapi~=0.115.6
+uvicorn
+cachetools~=5.5.0
+pydantic~=2.10.3
+mysql-connector-python
+fast-autocomplete[levenshtein]
