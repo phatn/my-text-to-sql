@@ -9,5 +9,4 @@ def suggest(word):
     # Initialize AutoComplete
     autocomplete = AutoComplete(words=words)
     # Get suggestions
-    return autocomplete.search(word, max_cost=3, size=3)
-
+    return autocomplete.search(word, max_cost=3, size=100)
