@@ -18,8 +18,6 @@ def get_schema():
     # Iterate over all tables
     for i in range(0, len(tables)):
         table_name = tables[i][0]
-        if table_name == 'users':
-            continue
         # print(f"Table: {table_name}")
         schema += f'CREATE TABLE {table_name}('
         # Query to get columns and their data types for the current table
